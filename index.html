@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Lilith 🎂</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -14,19 +16,35 @@
 
 body {
     min-height: 100vh;
+
     background:
-        radial-gradient(circle at top, #25152f 0%, #0d0912 45%, #050509 100%);
+        radial-gradient(
+            circle at top,
+            #25152f 0%,
+            #0d0912 45%,
+            #050509 100%
+        );
+
     color: #fff;
+
     font-family: "Segoe UI", sans-serif;
+
     overflow-x: hidden;
 }
 
+/* =========================
+   GENERAL
+   ========================= */
+
 .screen {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     padding: 25px;
+
     text-align: center;
 }
 
@@ -34,206 +52,424 @@ body {
     display: none !important;
 }
 
-/* Floating particles */
+/* =========================
+   FLOATING PARTICLES
+   ========================= */
 
 .particle {
     position: fixed;
+
     width: 5px;
     height: 5px;
+
     background: #d8a7ff;
+
     border-radius: 50%;
+
     opacity: .5;
-    animation: float 7s infinite ease-in-out;
+
+    animation:
+        float 7s infinite ease-in-out;
+
     pointer-events: none;
 }
 
 @keyframes float {
+
     0%,100% {
         transform: translateY(0);
         opacity: .2;
     }
+
     50% {
         transform: translateY(-80px);
         opacity: .8;
     }
 }
 
-/* Countdown */
+/* =========================
+   COUNTDOWN
+   ========================= */
 
 .countdown-box {
+
     width: min(700px, 100%);
+
     padding: 45px 25px;
-    border: 1px solid rgba(211,155,255,.25);
+
+    border:
+        1px solid
+        rgba(211,155,255,.25);
+
     border-radius: 28px;
-    background: rgba(255,255,255,.045);
+
+    background:
+        rgba(255,255,255,.045);
+
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 50px rgba(159,76,220,.12);
+
+    box-shadow:
+        0 0 50px
+        rgba(159,76,220,.12);
 }
 
 .small-title {
+
     color: #cda2f5;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
+
     font-size: 13px;
+
     margin-bottom: 18px;
 }
 
 h1 {
-    font-size: clamp(38px, 8vw, 75px);
+
+    font-size:
+        clamp(38px, 8vw, 75px);
+
     margin-bottom: 12px;
 }
 
 .subtitle {
+
     color: #bcb2c5;
+
     font-size: 17px;
+
     margin-bottom: 35px;
 }
 
 .date {
+
     color: #e0b7ff;
+
     font-size: 20px;
+
     margin-bottom: 30px;
 }
 
+/* =========================
+   TIMER
+   ========================= */
+
 .timer {
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 12px;
 }
 
 .time {
-    background: rgba(255,255,255,.06);
+
+    background:
+        rgba(255,255,255,.06);
+
     border-radius: 18px;
+
     padding: 20px 8px;
-    border: 1px solid rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
 }
 
 .time span {
+
     display: block;
-    font-size: clamp(28px, 6vw, 48px);
+
+    font-size:
+        clamp(28px, 6vw, 48px);
+
     font-weight: 700;
+
     color: #fff;
 }
 
 .time small {
+
     color: #9d91a5;
+
     text-transform: uppercase;
+
     font-size: 10px;
+
     letter-spacing: 1px;
 }
 
-/* Birthday screen */
+/* =========================
+   BIRTHDAY SCREEN
+   ========================= */
 
 .birthday {
-    animation: appear 1.5s ease forwards;
+
+    animation:
+        appear 1.5s ease forwards;
 }
 
 @keyframes appear {
+
     from {
         opacity: 0;
         transform: scale(.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
+/* =========================
+   CAKE
+   ========================= */
+
 .heart {
+
     font-size: 55px;
-    animation: heartbeat 1.5s infinite;
+
+    animation:
+        heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.15); }
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
 }
 
+/* =========================
+   BIRTHDAY TITLE
+   ========================= */
+
 .birthday h1 {
-    background: linear-gradient(90deg,#fff,#d7a1ff,#fff);
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #d7a1ff,
+            #fff
+        );
+
     -webkit-background-clip: text;
+
     color: transparent;
 }
 
+/* =========================
+   MESSAGE
+   ========================= */
+
 .message {
+
     max-width: 650px;
+
     margin: 20px auto;
+
     line-height: 1.8;
+
     color: #c8bdcf;
+
     font-size: 17px;
 }
 
+/* =========================
+   CARD
+   ========================= */
+
 .card {
+
     margin-top: 30px;
+
     padding: 30px;
+
     border-radius: 25px;
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(211,155,255,.2);
-    box-shadow: 0 0 35px rgba(159,76,220,.1);
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(211,155,255,.2);
+
+    box-shadow:
+        0 0 35px
+        rgba(159,76,220,.1);
 }
 
+/* =========================
+   BUTTON
+   ========================= */
+
 button {
+
     margin-top: 25px;
+
     padding: 14px 25px;
+
     border: none;
+
     border-radius: 50px;
+
     background: #c084fc;
+
     color: #160b1d;
+
     font-weight: 700;
+
     font-size: 15px;
+
     cursor: pointer;
+
     transition: .3s;
 }
 
 button:hover {
+
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(192,132,252,.3);
+
+    box-shadow:
+        0 10px 30px
+        rgba(192,132,252,.3);
 }
 
-/* Confetti */
+/* =========================
+   FINAL MESSAGE
+   ========================= */
+
+.final-message {
+
+    margin-top: 40px;
+
+    color: #c084fc;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    opacity: 0;
+
+    animation:
+        finalAppear 2s ease forwards;
+
+    animation-delay: 1.5s;
+
+    text-shadow:
+        0 0 15px
+        rgba(192,132,252,.4);
+}
+
+@keyframes finalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+/* =========================
+   CONFETTI
+   ========================= */
 
 .confetti {
+
     position: fixed;
+
     width: 8px;
     height: 14px;
+
     top: -20px;
-    animation: fall linear forwards;
+
+    animation:
+        fall linear forwards;
+
     pointer-events: none;
 }
 
 @keyframes fall {
+
     to {
-        transform: translateY(110vh) rotate(720deg);
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
     }
 }
 
+/* =========================
+   MOBILE
+   ========================= */
+
 @media(max-width:600px) {
+
     .timer {
-        grid-template-columns: repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .countdown-box {
-        padding: 35px 18px;
+
+        padding:
+            35px 18px;
+    }
+
+    .final-message {
+
+        font-size: 15px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- COUNTDOWN SCREEN -->
+<!-- =========================
+     COUNTDOWN SCREEN
+     ========================= -->
 
-<section id="countdownScreen" class="screen">
+<section
+    id="countdownScreen"
+    class="screen"
+>
+
     <div class="countdown-box">
 
         <div class="small-title">
             A little surprise is waiting...
         </div>
 
-        <h1>For Lilith 🎁</h1>
+        <h1>
+            For Lilith 🎁
+        </h1>
 
         <p class="subtitle">
-            Something cute is waiting for your birthday.
+            Something cute is waiting
+            for your birthday.
         </p>
 
         <div class="date">
@@ -243,65 +479,130 @@ button:hover {
         <div class="timer">
 
             <div class="time">
-                <span id="days">00</span>
-                <small>Days</small>
+
+                <span id="days">
+                    00
+                </span>
+
+                <small>
+                    Days
+                </small>
+
             </div>
 
             <div class="time">
-                <span id="hours">00</span>
-                <small>Hours</small>
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small>
+                    Hours
+                </small>
+
             </div>
 
             <div class="time">
-                <span id="minutes">00</span>
-                <small>Minutes</small>
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small>
+                    Minutes
+                </small>
+
             </div>
 
             <div class="time">
-                <span id="seconds">00</span>
-                <small>Seconds</small>
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small>
+                    Seconds
+                </small>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- BIRTHDAY SCREEN -->
+<!-- =========================
+     BIRTHDAY SCREEN
+     ========================= -->
 
-<section id="birthdayScreen" class="screen hidden">
+<section
+    id="birthdayScreen"
+    class="screen hidden"
+>
 
     <div class="birthday">
 
-        <div class="heart">🎂</div>
+        <div class="heart">
+            🎂
+        </div>
 
         <div class="small-title">
             It's finally here...
         </div>
 
-        <h1>Happy Birthday<br>Lilith! 🎉</h1>
+        <h1>
+            Happy Birthday<br>
+            Lilith! 🎉
+        </h1>
 
         <p class="message">
-            Happy Birthday to one of the coolest people ever 🖤
+
+            Happy Birthday to one of
+            the coolest people ever 🖤
+
             <br><br>
-            I hope this year brings you a lot of happiness,
-            amazing memories, and plenty of reasons to smile.
+
+            I hope this year brings you
+            a lot of happiness,
+            amazing memories,
+            and plenty of reasons to smile.
+
             <br><br>
-            Stay exactly as awesome as you are. ✨
+
+            Stay exactly as awesome
+            as you are. ✨
+
         </p>
 
         <div class="card">
-            <div style="font-size:45px;">🎈 🎂 🎈</div>
 
-            <p style="margin-top:15px;color:#d0c5d6;">
-                Here's to another year of great memories.
+            <div style="font-size:45px;">
+                🎈 🎂 🎈
+            </div>
+
+            <p
+                style="
+                    margin-top:15px;
+                    color:#d0c5d6;
+                "
+            >
+                Here's to another year
+                of great memories.
             </p>
 
             <button onclick="celebrate()">
                 One More Surprise ✨
             </button>
+
         </div>
+
+        <!-- FINAL MESSAGE -->
+
+        <p class="final-message">
+            Yurzen wish you have a wonderful day ✨
+        </p>
 
     </div>
 
@@ -315,23 +616,38 @@ button:hover {
    Egypt Time: UTC+2
    ========================= */
 
-const birthday = new Date("2026-09-11T00:00:00+02:00").getTime();
+const birthday =
+    new Date(
+        "2026-09-11T00:00:00+02:00"
+    ).getTime();
 
 
 const countdownScreen =
-    document.getElementById("countdownScreen");
+    document.getElementById(
+        "countdownScreen"
+    );
 
 const birthdayScreen =
-    document.getElementById("birthdayScreen");
+    document.getElementById(
+        "birthdayScreen"
+    );
 
+
+/* =========================
+   OPEN BIRTHDAY
+   ========================= */
 
 function openBirthday() {
 
-    countdownScreen.classList.add("hidden");
-    birthdayScreen.classList.remove("hidden");
+    countdownScreen
+        .classList
+        .add("hidden");
+
+    birthdayScreen
+        .classList
+        .remove("hidden");
 
     celebrate();
-
 }
 
 
@@ -341,54 +657,94 @@ function openBirthday() {
 
 function updateCountdown() {
 
-    const now = new Date().getTime();
+    const now =
+        new Date().getTime();
 
-    const distance = birthday - now;
+    const distance =
+        birthday - now;
+
 
     if (distance <= 0) {
+
         openBirthday();
+
         return;
     }
 
+
     const days =
-        Math.floor(distance / (1000 * 60 * 60 * 24));
+        Math.floor(
+            distance /
+            (1000 * 60 * 60 * 24)
+        );
+
 
     const hours =
         Math.floor(
-            (distance % (1000 * 60 * 60 * 24))
-            / (1000 * 60 * 60)
+            (
+                distance %
+                (1000 * 60 * 60 * 24)
+            )
+            /
+            (1000 * 60 * 60)
         );
+
 
     const minutes =
         Math.floor(
-            (distance % (1000 * 60 * 60))
-            / (1000 * 60)
+            (
+                distance %
+                (1000 * 60 * 60)
+            )
+            /
+            (1000 * 60)
         );
+
 
     const seconds =
         Math.floor(
-            (distance % (1000 * 60))
-            / 1000
+            (
+                distance %
+                (1000 * 60)
+            )
+            /
+            1000
         );
 
 
-    document.getElementById("days").textContent =
-        String(days).padStart(2,"0");
+    document.getElementById("days")
+        .textContent =
+        String(days)
+        .padStart(2,"0");
 
-    document.getElementById("hours").textContent =
-        String(hours).padStart(2,"0");
 
-    document.getElementById("minutes").textContent =
-        String(minutes).padStart(2,"0");
+    document.getElementById("hours")
+        .textContent =
+        String(hours)
+        .padStart(2,"0");
 
-    document.getElementById("seconds").textContent =
-        String(seconds).padStart(2,"0");
+
+    document.getElementById("minutes")
+        .textContent =
+        String(minutes)
+        .padStart(2,"0");
+
+
+    document.getElementById("seconds")
+        .textContent =
+        String(seconds)
+        .padStart(2,"0");
 }
 
 
+/* Start countdown */
+
 updateCountdown();
 
-setInterval(updateCountdown,1000);
+setInterval(
+    updateCountdown,
+    1000
+);
 
 
 /* =========================
@@ -397,32 +753,60 @@ setInterval(updateCountdown,1000);
 
 function celebrate() {
 
-    for(let i = 0; i < 120; i++) {
+    for(
+        let i = 0;
+        i < 120;
+        i++
+    ) {
 
-        const piece = document.createElement("div");
+        const piece =
+            document.createElement("div");
 
-        piece.className = "confetti";
+
+        piece.className =
+            "confetti";
+
 
         piece.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() * 100
+            + "vw";
+
 
         piece.style.animationDuration =
-            (Math.random() * 3 + 2) + "s";
+            (
+                Math.random() * 3 + 2
+            )
+            + "s";
+
 
         piece.style.animationDelay =
-            Math.random() * 1.5 + "s";
+            Math.random() * 1.5
+            + "s";
+
 
         piece.style.background =
-            `hsl(${Math.random()*360},80%,70%)`;
+            `hsl(
+                ${Math.random() * 360},
+                80%,
+                70%
+            )`;
+
 
         piece.style.transform =
-            `rotate(${Math.random()*360}deg)`;
+            `rotate(
+                ${Math.random() * 360}deg
+            )`;
 
-        document.body.appendChild(piece);
+
+        document.body
+            .appendChild(piece);
+
 
         setTimeout(() => {
+
             piece.remove();
-        },5000);
+
+        }, 5000);
     }
 }
 
@@ -431,25 +815,41 @@ function celebrate() {
    BACKGROUND PARTICLES
    ========================= */
 
-for(let i = 0; i < 25; i++) {
+for(
+    let i = 0;
+    i < 25;
+    i++
+) {
 
-    const particle = document.createElement("div");
+    const particle =
+        document.createElement("div");
 
-    particle.className = "particle";
+
+    particle.className =
+        "particle";
+
 
     particle.style.left =
-        Math.random() * 100 + "vw";
+        Math.random() * 100
+        + "vw";
+
 
     particle.style.top =
-        Math.random() * 100 + "vh";
+        Math.random() * 100
+        + "vh";
+
 
     particle.style.animationDelay =
-        Math.random() * 7 + "s";
+        Math.random() * 7
+        + "s";
 
-    document.body.appendChild(particle);
+
+    document.body
+        .appendChild(particle);
 }
 
 </script>
 
 </body>
-  </html> 
+</html>
+
