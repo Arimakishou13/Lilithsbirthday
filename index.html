@@ -32,6 +32,10 @@ body {
     overflow-x: hidden;
 }
 
+/* =========================
+   GENERAL
+   ========================= */
+
 .screen {
     min-height: 100vh;
 
@@ -47,6 +51,10 @@ body {
 .hidden {
     display: none !important;
 }
+
+/* =========================
+   FLOATING PARTICLES
+   ========================= */
 
 .particle {
     position: fixed;
@@ -68,7 +76,7 @@ body {
 
 @keyframes float {
 
-    0%,100% {
+    0%, 100% {
         transform: translateY(0);
         opacity: .2;
     }
@@ -78,6 +86,10 @@ body {
         opacity: .8;
     }
 }
+
+/* =========================
+   COUNTDOWN
+   ========================= */
 
 .countdown-box {
 
@@ -140,6 +152,10 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* =========================
+   TIMER
+   ========================= */
+
 .timer {
 
     display: grid;
@@ -187,6 +203,10 @@ h1 {
     letter-spacing: 1px;
 }
 
+/* =========================
+   BIRTHDAY SCREEN
+   ========================= */
+
 .birthday {
 
     animation:
@@ -206,6 +226,10 @@ h1 {
     }
 }
 
+/* =========================
+   CAKE
+   ========================= */
+
 .heart {
 
     font-size: 55px;
@@ -216,7 +240,7 @@ h1 {
 
 @keyframes heartbeat {
 
-    0%,100% {
+    0%, 100% {
         transform: scale(1);
     }
 
@@ -224,6 +248,10 @@ h1 {
         transform: scale(1.15);
     }
 }
+
+/* =========================
+   BIRTHDAY TITLE
+   ========================= */
 
 .birthday h1 {
 
@@ -240,6 +268,10 @@ h1 {
     color: transparent;
 }
 
+/* =========================
+   MESSAGE
+   ========================= */
+
 .message {
 
     max-width: 650px;
@@ -252,6 +284,10 @@ h1 {
 
     font-size: 17px;
 }
+
+/* =========================
+   CARD
+   ========================= */
 
 .card {
 
@@ -272,6 +308,10 @@ h1 {
         0 0 35px
         rgba(159,76,220,.1);
 }
+
+/* =========================
+   BUTTON
+   ========================= */
 
 button {
 
@@ -304,6 +344,10 @@ button:hover {
         0 10px 30px
         rgba(192,132,252,.3);
 }
+
+/* =========================
+   FINAL MESSAGE
+   ========================= */
 
 .final-message {
 
@@ -346,6 +390,10 @@ button:hover {
     }
 }
 
+/* =========================
+   CONFETTI
+   ========================= */
+
 .confetti {
 
     position: fixed;
@@ -371,12 +419,16 @@ button:hover {
     }
 }
 
+/* =========================
+   MOBILE
+   ========================= */
+
 @media(max-width:600px) {
 
     .timer {
 
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
     }
 
     .countdown-box {
@@ -396,6 +448,10 @@ button:hover {
 </head>
 
 <body>
+
+<!-- =========================
+     COUNTDOWN SCREEN
+     ========================= -->
 
 <section
     id="countdownScreen"
@@ -478,6 +534,10 @@ button:hover {
 </section>
 
 
+<!-- =========================
+     BIRTHDAY SCREEN
+     ========================= -->
+
 <section
     id="birthdayScreen"
     class="screen hidden"
@@ -552,8 +612,15 @@ button:hover {
 
 /* =========================
    BIRTHDAY DATE
-   Egypt Time: UTC+3
    ========================= */
+
+/*
+   EXACT TARGET:
+
+   11 September 2026
+   12:00 AM
+   Egypt Time (UTC+3)
+*/
 
 const birthday =
     new Date(
@@ -654,27 +721,31 @@ function updateCountdown() {
     document.getElementById("days")
         .textContent =
         String(days)
-        .padStart(2,"0");
+        .padStart(2, "0");
 
 
     document.getElementById("hours")
         .textContent =
         String(hours)
-        .padStart(2,"0");
+        .padStart(2, "0");
 
 
     document.getElementById("minutes")
         .textContent =
         String(minutes)
-        .padStart(2,"0");
+        .padStart(2, "0");
 
 
     document.getElementById("seconds")
         .textContent =
         String(seconds)
-        .padStart(2,"0");
+        .padStart(2, "0");
 }
 
+
+/* =========================
+   START COUNTDOWN
+   ========================= */
 
 updateCountdown();
 
@@ -690,7 +761,7 @@ setInterval(
 
 function celebrate() {
 
-    for(
+    for (
         let i = 0;
         i < 120;
         i++
@@ -752,7 +823,7 @@ function celebrate() {
    BACKGROUND PARTICLES
    ========================= */
 
-for(
+for (
     let i = 0;
     i < 25;
     i++
