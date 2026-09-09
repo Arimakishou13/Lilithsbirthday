@@ -32,10 +32,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   GENERAL
-   ========================= */
-
 .screen {
     min-height: 100vh;
 
@@ -51,10 +47,6 @@ body {
 .hidden {
     display: none !important;
 }
-
-/* =========================
-   FLOATING PARTICLES
-   ========================= */
 
 .particle {
     position: fixed;
@@ -86,10 +78,6 @@ body {
         opacity: .8;
     }
 }
-
-/* =========================
-   COUNTDOWN
-   ========================= */
 
 .countdown-box {
 
@@ -152,10 +140,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* =========================
-   TIMER
-   ========================= */
-
 .timer {
 
     display: grid;
@@ -203,10 +187,6 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* =========================
-   BIRTHDAY SCREEN
-   ========================= */
-
 .birthday {
 
     animation:
@@ -225,10 +205,6 @@ h1 {
         transform: scale(1);
     }
 }
-
-/* =========================
-   CAKE
-   ========================= */
 
 .heart {
 
@@ -249,10 +225,6 @@ h1 {
     }
 }
 
-/* =========================
-   BIRTHDAY TITLE
-   ========================= */
-
 .birthday h1 {
 
     background:
@@ -268,10 +240,6 @@ h1 {
     color: transparent;
 }
 
-/* =========================
-   MESSAGE
-   ========================= */
-
 .message {
 
     max-width: 650px;
@@ -284,10 +252,6 @@ h1 {
 
     font-size: 17px;
 }
-
-/* =========================
-   CARD
-   ========================= */
 
 .card {
 
@@ -308,10 +272,6 @@ h1 {
         0 0 35px
         rgba(159,76,220,.1);
 }
-
-/* =========================
-   BUTTON
-   ========================= */
 
 button {
 
@@ -344,10 +304,6 @@ button:hover {
         0 10px 30px
         rgba(192,132,252,.3);
 }
-
-/* =========================
-   FINAL MESSAGE
-   ========================= */
 
 .final-message {
 
@@ -390,10 +346,6 @@ button:hover {
     }
 }
 
-/* =========================
-   CONFETTI
-   ========================= */
-
 .confetti {
 
     position: fixed;
@@ -419,10 +371,6 @@ button:hover {
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
-
 @media(max-width:600px) {
 
     .timer {
@@ -441,16 +389,13 @@ button:hover {
 
         font-size: 15px;
     }
+
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- =========================
-     COUNTDOWN SCREEN
-     ========================= -->
 
 <section
     id="countdownScreen"
@@ -533,10 +478,6 @@ button:hover {
 </section>
 
 
-<!-- =========================
-     BIRTHDAY SCREEN
-     ========================= -->
-
 <section
     id="birthdayScreen"
     class="screen hidden"
@@ -598,10 +539,8 @@ button:hover {
 
         </div>
 
-        <!-- FINAL MESSAGE -->
-
         <p class="final-message">
-            Yurzen wish you have a wonderful day ✨
+            Yurzen wishes you a wonderful day ✨
         </p>
 
     </div>
@@ -613,12 +552,12 @@ button:hover {
 
 /* =========================
    BIRTHDAY DATE
-   Egypt Time: UTC+2
+   Egypt Time: UTC+3
    ========================= */
 
 const birthday =
     new Date(
-        "2026-09-11T00:00:00+02:00"
+        "2026-09-11T00:00:00+03:00"
     ).getTime();
 
 
@@ -737,8 +676,6 @@ function updateCountdown() {
 }
 
 
-/* Start countdown */
-
 updateCountdown();
 
 setInterval(
@@ -852,4 +789,3 @@ for(
 
 </body>
 </html>
-
